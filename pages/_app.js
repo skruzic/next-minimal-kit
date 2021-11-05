@@ -4,6 +4,7 @@ import { BaseOptionChartStyle } from "../components/charts/BaseOptionChart";
 import Layout from "../layouts/dashboard";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "../lib/createEmotionCache";
+import "simplebar/src/simplebar.css";
 
 const clientSideEmotionCache = createEmotionCache();
 

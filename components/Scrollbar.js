@@ -3,7 +3,6 @@ import SimpleBarReact from "simplebar-react";
 // material
 import { alpha, styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
-import { useEffect } from "react";
 
 // ----------------------------------------------------------------------
 
@@ -41,12 +40,11 @@ Scrollbar.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function Scrollbar({ children, sx, ...other }) {
+function Scrollbar({ children, sx, ...other }) {
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     );
-  //const isMobile = true;
 
   if (isMobile) {
     return (
@@ -64,3 +62,7 @@ export default function Scrollbar({ children, sx, ...other }) {
     </RootStyle>
   );
 }
+
+Scrollbar.defaultProps = {};
+
+export default Scrollbar;

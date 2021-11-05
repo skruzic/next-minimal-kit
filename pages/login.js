@@ -1,4 +1,5 @@
 import Link from "@components/MuiNextLink";
+import Image from "next/image";
 // material
 import { styled } from "@mui/material/styles";
 import { Card, Stack, Container, Typography } from "@mui/material";
@@ -9,6 +10,7 @@ import Page from "../components/Page";
 import { MHidden } from "../components/@material-extend";
 import { LoginForm } from "../components/authentication/login";
 import AuthSocial from "../components/authentication/AuthSocial";
+import illustration_login from "../public/illustrations/illustration_login.png";
 
 // ----------------------------------------------------------------------
 
@@ -58,7 +60,7 @@ export default function Login() {
           <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
             Hi, Welcome Back
           </Typography>
-          <img src="/illustrations/illustration_login.png" alt="login" />
+          <Image src={illustration_login} alt="login" />
         </SectionStyle>
       </MHidden>
 
